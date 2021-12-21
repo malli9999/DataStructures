@@ -1,10 +1,11 @@
 package com.example.demo;
 
 public class SingleLinkedList {
-
+//Head will be pointing to the first node in the linked list(used to traverse)
 	Node head = null;
-
+//Creating the Node class
 	class Node {
+		//Node contains data and Next(Stores the adddress of the next object)
 		int data;
 		Node next;
 
@@ -16,7 +17,7 @@ public class SingleLinkedList {
 			this.data = data;
 		}
 	}
-
+//Method to insert into the Linked List
 	public void insert(int data) {
 		Node node = new Node();
 		node.data = data;
@@ -31,7 +32,7 @@ public class SingleLinkedList {
 			head = node;
 		}
 	}
-
+//Method to see the data in the linked list
 	public void display() {
 		Node n = head;
 		System.out.println(n.data);
