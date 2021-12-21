@@ -45,7 +45,7 @@ public class SingleLinkedList {
 		SingleLinkedList linkedList = new SingleLinkedList();
 		linkedList.insert(5);
 		linkedList.insert(10);
-
+		linkedList.insert(15);
 		linkedList.display();
 	}
 }
