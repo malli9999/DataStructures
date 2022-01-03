@@ -2,7 +2,7 @@ package com.example.demo;
 
 public class DoubleLinkedList {
 	Node head = null;
-
+// For Node creation 
 	class Node {
 		int data;
 		Node Prev;
@@ -17,6 +17,7 @@ public class DoubleLinkedList {
 
 	}
 
+	// For inserting the data in the double linked list 
 	public void insert(int data) {
 		Node node = new Node();
 		node.data = data;
@@ -41,6 +42,7 @@ public class DoubleLinkedList {
 
 	}
 
+	//Method to display to list
 	public void display() {
 		Node n = head;
 		System.out.println("head of the node" + n.data);
