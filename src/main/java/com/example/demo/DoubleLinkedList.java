@@ -45,12 +45,26 @@ public class DoubleLinkedList {
 		node.data = data;
 		node.Prev = null;
 		node.next = null;
+		
 		// if it is at index 0
 		if (index == 0) {
 			Node n = head;
 			n.Prev = node;
 			node.next = head;
 			head = node;
+		}
+		
+		Node n = head; 
+		
+		while(n.next!= null) {
+			n =n.next;
+			for(int i =0; i< index -1; i++) {
+				n =n.next;
+			}
+			node.Prev = n;
+			node.next = n.next;
+			n.next = node;
+			n.Prev = n;
 		}
 	}
 
@@ -72,6 +86,7 @@ public class DoubleLinkedList {
 		list.insert(10);
 		list.insert(13);
 		list.insertAt(0, 1);
+		list.insertAt(1, 2);
 		list.display();
 	}
 
